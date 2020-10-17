@@ -1,0 +1,141 @@
+@import "nav.css";
+@import "bgc.css";
+html,body
+{
+	width:100%;
+	height:100%;
+	overflow-x: hidden;
+}
+.slider
+{
+	position: absolute;
+	left:0%;
+	width:100%;
+	height:50%;
+	top:8%;
+	overflow: hidden;
+}
+.slider div
+{
+	position: absolute;
+	left:0%;
+	width:100%;
+	height: 100%;
+}
+.slide1{
+		animation:fade1 12s infinite;
+}
+.slide2{
+		animation:fade2 12s infinite;
+}
+.slide3{
+		animation:fade3 12s infinite;
+}
+.slide4{
+		animation:fade4 12s infinite;
+}
+.slider div img
+{
+	position: absolute;
+	left:0;
+	width:100%;
+	height:100%;
+}
+/* @keyframes slide
+{
+	0%{
+		left:0%;
+	}
+	25%{
+		left:-100%;
+	}
+	50%{
+		left:-200%;
+	}
+	75%{
+		left:-300%;
+	}
+} */
+
+@keyframes fade1{
+	  0%   {opacity:1}
+  25% { opacity: 0}
+  50% { opacity: 0}
+  75% { opacity: 0}
+	100%{opacity: 1}
+}
+@keyframes fade2{
+	0%   {opacity:0}
+25% { opacity: 1}
+50% { opacity: 0}
+75% { opacity: 0}
+100%{opacity: 0}
+}
+@keyframes fade3{
+	0%   {opacity:0}
+25% { opacity: 0}
+50% { opacity: 1}
+75% { opacity: 0}
+100%{opacity: 0}
+}
+@keyframes fade4{
+	0%   {opacity:0}
+25% { opacity: 0}
+50% { opacity: 0}
+75% { opacity: 1}
+100%{opacity: 0}
+}
+
+.items
+{
+	position: absolute;
+	top:60%;
+	width:100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.items .ItemType{
+	cursor: pointer;
+	position: relative;
+	left:15%;
+	float:left;
+	width: 35%;
+	height:30%;
+	margin: 5px;
+  display: inline-block;
+  border: 5px solid #8e44ad;
+  color: #8e44ad;
+  font-family: arial;
+  background-image: linear-gradient(#8e44ad, #8e44ad);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size .5s, color .5s;
+}
+.items .ItemType:hover{
+	 background-size: 100% 100%;
+   color: #fff;
+}
+.items .ItemType p{
+	text-align: center;
+	vertical-align: middle;
+	line-height: 100%;
+	font-size: 2vw;
+}
+
+@media only screen and (max-width:960px){
+	.items{
+		flex-direction: column;
+	}
+	.items .ItemType{
+		left:32.5%;
+		height:75%;
+		font-size: 10vw;
+	}
+	.items .ItemType p{
+		text-align: center;
+		vertical-align: middle;
+		line-height: 100%;
+		font-size: 5vw;
+	}
+}
